@@ -44,7 +44,7 @@ Please cite the following paper if you use this repository in your reseach.
         year={2021}
     }
 # Reference
-The code for this project is based on the DSTA-Net(Decoupled Spatial-Temporal Attention Network for Skeleton-Based Action-Gesture Recognition)
+The code of this project is based on the DSTA-Net(Decoupled Spatial-Temporal Attention Network for Skeleton-Based Action-Gesture Recognition)
 
 # Contact
 For any questions, feel free to contact: `yuhanzhan9@gmail.com`
