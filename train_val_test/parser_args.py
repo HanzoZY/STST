@@ -10,7 +10,7 @@ def parser_args(block, config_path=None):
     # params
     parser = argparse.ArgumentParser()
     parser.add_argument('-config', default='./config/shrec/shrec_stst_28.yaml')
-    parser.add_argument('-model', default='resnet3d_50')
+    parser.add_argument('-model', default='stst')
     parser.add_argument('-model_param', default={}, help=None)
     # classify_multi_crop classify classify_pose
     parser.add_argument('-train', default='classify')

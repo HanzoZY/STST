@@ -60,7 +60,11 @@ def train_classifier(data_loader, model, loss_function, optimizer, global_step, 
 
         # inputs, labels = Variable(inputs.cuda(non_blocking=True)), Variable(labels.cuda(non_blocking=True))
 
-        # inputs, targets, labels = inputs.cuda(non_blocking=True), targets.cuda(non_blocking=True), labels.cuda(non_blocking=True)
+        if type(args.device_id) is list and len(args.device_id) > 0:
+            inputs, targets, labels = inputs.cuda(non_blocking=True), targets.cuda(non_blocking=True), labels.cuda(
+                non_blocking=True)
+        else:
+            pass
 
         # net = torch.nn.DataParallel(model, device_ids=args.device_id)
         outputs, pretext_loss, PC_loss, PT_loss, PS_loss, RT_loss, CL_loss = model(inputs)
@@ -134,8 +138,8 @@ def val_classifier(data_loader, model, loss_function, global_step, args, writer)
 
 
     step = 0
-    # process = tqdm(IteratorTimer(data_loader), desc='Val: ')
-    process = tqdm(data_loader, desc='Val: ')
+    process = tqdm(IteratorTimer(data_loader), desc='Val: ')
+    # process = tqdm(data_loader, desc='Val: ')
     # s = time.time()
     # t=0
     score_frag = []
@@ -195,7 +199,7 @@ def val_classifier(data_loader, model, loss_function, global_step, args, writer)
         step += 1
 
         process.set_description(
-            'Val-batch: acc: {:4f}, loss: {:4f}, pret: {:4f}, mask: {:4f}, PT: {:4f}, PS: {:4f}, RE: {:4f}, sim: {:4f}, time: {:4f}'.format(acc, ls, pretext_loss, mask_loss, jigsaw_T_loss, joint_loss, reverse_loss, simloss, process.iterable.last_duration))
+            'Val-batch: acc: {:4f}, loss: {:4f}, pret: {:4f}, PC: {:4f}, PT: {:4f}, PS: {:4f}, RE: {:4f}, sim: {:4f}, time: {:4f}'.format(acc, ls, pretext_loss, mask_loss, jigsaw_T_loss, joint_loss, reverse_loss, simloss, process.iterable.last_duration))
         # process.set_description_str(
         #     'Val: acc: {:4f}, loss: {:4f}, time: {:4f}'.format(t, t, t), refresh=False)
         # if len(inputs.shape) == 5:
@@ -222,15 +226,15 @@ def val_classifier(data_loader, model, loss_function, global_step, args, writer)
     reverse_loss_val = reverse_loss_total / step
     simloss_val = simloss_total /step
     accuracy = right_num_total / total_num
-    print('test result: acc: {:4f}, loss: {:4f}, pret: {:4f}, mask: {:4f}, PT: {:4f}, PS: {:4f}, RE: {:4f}, sim: {:4f}'.format(accuracy, loss, pretext_loss_val, mask_loss_val, jigsaw_T_loss_val, joint_loss_val, reverse_loss_val, simloss_val))
+    print('test result: acc: {:4f}, loss: {:4f}, pretext: {:4f}, PC: {:4f}, PT: {:4f}, PS: {:4f}, RE: {:4f}, CL: {:4f}'.format(accuracy, loss, pretext_loss_val, mask_loss_val, jigsaw_T_loss_val, joint_loss_val, reverse_loss_val, simloss_val))
     if args.mode == 'train_val' and writer is not None:
         writer.add_scalar('loss', loss, global_step)
         writer.add_scalar('pretext', pretext_loss_val, global_step)
-        writer.add_scalar('mask_ls', mask_loss_val, global_step)
-        writer.add_scalar('jigT_ls', jigsaw_T_loss_val, global_step)
-        writer.add_scalar('Joint_ls', joint_loss_val, global_step)
-        writer.add_scalar('Reverse_ls', reverse_loss_val, global_step)
-        writer.add_scalar('sim_ls', simloss_val, global_step)
+        writer.add_scalar('PC', mask_loss_val, global_step)
+        writer.add_scalar('PT', jigsaw_T_loss_val, global_step)
+        writer.add_scalar('PS', joint_loss_val, global_step)
+        writer.add_scalar('RT', reverse_loss_val, global_step)
+        writer.add_scalar('CL', simloss_val, global_step)
         writer.add_scalar('acc', accuracy, global_step)
         writer.add_scalar('batch time', process.iterable.last_duration, global_step)
 

@@ -1,11 +1,36 @@
 # STST
 STST: Spatial-Temporal Specialized Transformer for Skeleton-based Action Recognition in ACM MultiMedia2021
 
+
+# Result
+A little different with paper due the reimplementation.
+
+ - NTU-RGB+D X-Sub: ~91.9%
+ - SHREC-28: ~95.3%
+
+# Packages Required
+Python=3.6, Torch=1.6, Pickle, Numpy, Tqdm, Time, Opencv, Collections, Pyyaml, EasyDict, Shutil, Colorama, Argparse, TensorboardX, Itertools, Math, Inspect, Imutils
+
+# Data Preparation
+
+ - NTU-RGBD
+    - Download the NTU-RGBD from the "https://rose1.ntu.edu.sg/dataset/actionRecognition"
+    - Then you can use utils in folder gen_data to generate datasets for training.
+ - SHREC
+    - We have provided and split the dataset here.
+
 # Training & Testing
 
-Change the config file depending on what you want.
+- Train 
+  - Change the config file depending on what you want.
 
     `python train.py --config ./config/shrec/shrec_stst_28.yaml`
+- Test
+  - Change the config file depending on what you want.
+  
+    `python eval.py --config ./workdir/val/shrec/stst_toy_28_val.yaml` 
+  
+     Here we provide a small version of the model that has been trained for you to test.
 
      
 # Citation

@@ -4,7 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f1587fd-3b41-479c-add0-f3b7c1f95ac0" name="Changes" comment="" />
+    <list default="true" id="5f1587fd-3b41-479c-add0-f3b7c1f95ac0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/gen_hard_dataset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prepare/shrec/gendata.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prepare/shrec/joints.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prepare/shrec/label.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prepare/shrec/label_28.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_val_test/Confuse.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_val_test/analyze.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_val_test/gif_gen.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_val_test/parser_args.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_val_test/parser_args.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_val_test/prepare/dhg/gendata.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_val_test/prepare/dhg/joints.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_val_test/prepare/dhg/label.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_val_test/prepare/dhg/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_val_test/prepare/ntu_120/gendata.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_val_test/prepare/ntu_120/joints.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_val_test/prepare/ntu_120/label.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_val_test/prepare/ntu_60/gendata.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_val_test/prepare/ntu_60/joints.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_val_test/prepare/ntu_60/label.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_val_test/prepare/shrec/gendata.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_val_test/prepare/shrec/joints.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_val_test/prepare/shrec/label.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_val_test/prepare/shrec/label_28.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_val_test/train_val_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_val_test/train_val_model.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,9 +58,31 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.train">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="STST" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -72,7 +121,14 @@
       <updated>1643247805359</updated>
       <workItem from="1643247808724" duration="90000" />
       <workItem from="1643247904561" duration="20347000" />
-      <workItem from="1643454462105" duration="2044000" />
+      <workItem from="1643454462105" duration="2280000" />
+      <workItem from="1645776028765" duration="159000" />
+      <workItem from="1645776291868" duration="292000" />
+      <workItem from="1646720339644" duration="395000" />
+      <workItem from="1646720946811" duration="3664000" />
+      <workItem from="1647070099671" duration="884000" />
+      <workItem from="1647148692628" duration="1249000" />
+      <workItem from="1647329398364" duration="3380000" />
     </task>
     <servers />
   </component>
@@ -141,6 +197,11 @@
           <url>file://$PROJECT_DIR$/train_val_test/train_val_model.py</url>
           <line>48</line>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
